@@ -1,0 +1,18 @@
+#!/bin/sh
+mysql -uroot --password=passwd mysql  < database/drop.sql
+mysql -uroot --password=passwd mysql  < database/create.sql
+mysql -uroot --password=passwd Chameleon < database/documents/structure.sql
+mysql -uroot --password=passwd Chameleon < database/documents/initial.sql
+mysql -uroot --password=passwd Chameleon < database/documents/error.sql
+mysql -uroot --password=passwd Chameleon < database/documents/theme.sql
+mysql -uroot --password=passwd Chameleon < database/documents/email.sql
+mysql -uroot --password=passwd Chameleon < database/documents/infolets.sql
+mysql -uroot --password=passwd Chameleon < database/documents/tasks/user.sql
+mysql -uroot --password=passwd Chameleon < database/documents/tasks/document.sql
+mysql -uroot --password=passwd Chameleon < database/documents/tasks/theme.sql
+mysql -uroot --password=passwd Chameleon < database/themes/structure.sql
+mysql -uroot --password=passwd Chameleon < database/themes/initial.sql
+mysql -uroot --password=passwd Chameleon < database/users/structure.sql
+mysql -uroot --password=passwd Chameleon < database/users/initial.sql
+mysql -uroot --password=passwd Chameleon < database/preferences/structure.sql
+mysql -uroot --password=passwd Chameleon < database/preferences/initial.sql

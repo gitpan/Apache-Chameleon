@@ -1,0 +1,67 @@
+Chameleon README
+----------------
+
+DESCRIPTION
+-----------
+Chameleon aims to provide a framework for creating multiple user
+websites. It provides functions for user and document creation and
+maintenance. It is also user-customisable - the user can change the
+fonts, sizes and colours. It also supports theming.
+
+PREREQUISITES
+-------------
+- Apache with mod_perl installed
+- MySQL
+- Perl modules listed in Makefile.PL
+
+If installed via CPAN, all perl module prerequisites will be installed.
+Otherwise, look in Makefile.PL and install manually.
+
+INSTALLATION
+------------
+Install the perl modules in the usual way:
+perl Makefile.PL
+make
+make test
+make install
+
+Install the database. Edit install_db and fix the database username
+and password. 'mysql' must be in your path.
+./install_db
+
+Copy conf/chameleon.conf and conf/startup.pl to your Apache configuration
+directory, and add this line to the bottom of your httpd.conf:
+include chameleon.conf
+
+Edit chameleon.conf and replace the username and password with your 
+database username and password.
+
+Shutdown Apache, start it up again.
+
+TODO
+----
+Below is a list of things that need done.
+
+    o Automated tests!
+    o Code refactoring.
+    o Movable side panels.
+    o Make it more usable.
+    o Add some themes.
+    o Colour schemes.
+    o Documentation.
+    o Installation client.
+
+BUGS / KNOWN PROBLEMS
+---------------------
+Security / authorisation / ACLs.
+Currently anyone can read or create any doc or theme.  
+
+AUTHOR
+------
+Russell Matbouli <chameleon-spam@russell.matbouli.org>
+
+http://russell.matbouli.org
+
+LICENSE
+-------
+Distributed under GPL v2. See COPYING included with this distibution.

@@ -1,0 +1,10 @@
+Revision history for Perl extension Apache::Chameleon.
+
+0.02  Mon Apr 29 21:14:58 BST 2002
+    - Name change from Apache::Onanox to Chameleon
+    - Fixed numerous small problems
+    - Slightly cleaned up code
+    - Slightly cleaned up templates
+
+0.01  Tue Feb 12 11:57:44 2002
+    - Initial release.
